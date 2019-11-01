@@ -1,0 +1,31 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sat Oct  5 19:22:14 2019
+[*]
+[dumpfile] "/home/hub/Desktop/fpga/TinyFPGA-BX/ws2812b_apio/top_tb.vcd"
+[dumpfile_mtime] "Sat Oct  5 19:20:31 2019"
+[dumpfile_size] 5319448
+[savefile] "/home/hub/Desktop/fpga/TinyFPGA-BX/ws2812b_apio/top_tb.gtkw"
+[timestart] 278600
+[size] 1873 1056
+[pos] -1 -1
+*-16.000000 375813 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] main_tb.
+[treeopen] main_tb.UUT.
+[sst_width] 225
+[signals_width] 231
+[sst_expanded] 1
+[sst_vpaned_height] 320
+@28
+main_tb.UUT.ws2812_inst.clk
+main_tb.UUT.ws2812_inst.data
+@22
+main_tb.UUT.ws2812_inst.led_counter[3:0]
+@28
+main_tb.UUT.ws2812_inst.state[1:0]
+@22
+main_tb.UUT.ws2812_inst.bit_counter[9:0]
+@24
+main_tb.UUT.ws2812_inst.rgb_counter[4:0]
+[pattern_trace] 1
+[pattern_trace] 0
