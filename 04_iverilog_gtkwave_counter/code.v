@@ -17,6 +17,6 @@ module binary_counter
          r_reg <= r_next;
 	end	
 	assign binary  = r_reg;
-	assign r_next = r_reg + 1;
+	assign r_next = r_reg + 2;
 endmodule
 

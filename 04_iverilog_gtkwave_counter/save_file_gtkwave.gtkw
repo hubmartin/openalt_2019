@@ -1,0 +1,39 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Fri Nov 01 21:53:28 2019
+[*]
+[dumpfile] "C:\Users\Martin\Dropbox\Bckup\Dev\fpga\tinyFPGA\04_iverilog_gtkwave_counter\out_test.vcd"
+[dumpfile_mtime] "Fri Nov 01 21:52:25 2019"
+[dumpfile_size] 1791
+[savefile] "C:\Users\Martin\Dropbox\Bckup\Dev\fpga\tinyFPGA\04_iverilog_gtkwave_counter\save_file_gtkwave.gtkw"
+[timestart] 0
+[size] 1536 779
+[pos] -1 -1
+*-19.000000 461000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] stimulus.
+[sst_width] 211
+[signals_width] 190
+[sst_expanded] 1
+[sst_vpaned_height] 217
+@800200
+-stimulus.s1.binary
+@1001200
+-group_end
+@28
+stimulus.s1.clk
+@800022
+[color] 2
+stimulus.s1.binary[3:0]
+@29
+[color] 3
+(0)stimulus.s1.binary[3:0]
+[color] 3
+(1)stimulus.s1.binary[3:0]
+[color] 3
+(2)stimulus.s1.binary[3:0]
+[color] 3
+(3)stimulus.s1.binary[3:0]
+@1001200
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

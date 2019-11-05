@@ -89,6 +89,18 @@
             "width": 280,
             "height": 192
           }
+        },
+        {
+          "id": "feacb24d-eb19-4ca0-b6f3-6b134e7c5973",
+          "type": "b8333994d4571b30fb47887a95e876365a756da9",
+          "position": {
+            "x": 240,
+            "y": 56
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
         }
       ],
       "wires": [
@@ -232,6 +244,94 @@
               },
               "target": {
                 "block": "92490e7e-c3ba-4e9c-a917-2a771d99f1ef",
+                "port": "in"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "b8333994d4571b30fb47887a95e876365a756da9": {
+      "package": {
+        "name": "",
+        "version": "",
+        "description": "",
+        "author": "",
+        "image": ""
+      },
+      "design": {
+        "graph": {
+          "blocks": [
+            {
+              "id": "9639aaa5-64ee-497e-b58f-af55ef2741f3",
+              "type": "basic.output",
+              "data": {
+                "name": "out"
+              },
+              "position": {
+                "x": 688,
+                "y": 280
+              }
+            },
+            {
+              "id": "e1e5eadf-3214-480a-a34b-675ce4041210",
+              "type": "basic.input",
+              "data": {
+                "name": "in",
+                "clock": false
+              },
+              "position": {
+                "x": 88,
+                "y": 288
+              }
+            },
+            {
+              "id": "39c00582-c3b1-4abc-aebd-a43a6345a9a3",
+              "type": "basic.code",
+              "data": {
+                "code": "// Divider\n\nreg out = 1'b0;\n\nalways @(posedge in)\nbegin\n  out <= ~out;\nend\n\n\n\n",
+                "params": [],
+                "ports": {
+                  "in": [
+                    {
+                      "name": "in"
+                    }
+                  ],
+                  "out": [
+                    {
+                      "name": "out"
+                    }
+                  ]
+                }
+              },
+              "position": {
+                "x": 256,
+                "y": 200
+              },
+              "size": {
+                "width": 360,
+                "height": 232
+              }
+            }
+          ],
+          "wires": [
+            {
+              "source": {
+                "block": "e1e5eadf-3214-480a-a34b-675ce4041210",
+                "port": "out"
+              },
+              "target": {
+                "block": "39c00582-c3b1-4abc-aebd-a43a6345a9a3",
+                "port": "in"
+              }
+            },
+            {
+              "source": {
+                "block": "39c00582-c3b1-4abc-aebd-a43a6345a9a3",
+                "port": "out"
+              },
+              "target": {
+                "block": "9639aaa5-64ee-497e-b58f-af55ef2741f3",
                 "port": "in"
               }
             }

@@ -22,20 +22,22 @@ module top (
     // light up the LED according to the pattern
     assign LED = blink_pattern[blink_counter[25:21]];
 
-    wire led_write = 1;
+    // WS2812B stuff
     wire [7:0] led_position;
     wire [23:0] led_rgb_data;
 
-    assign led_position = { 5'b0, blink_counter[22:20]};
+    // Select LED number 0-7
+    assign led_position = blink_counter[22:20];
+    // Cycle RED & GREEN color based on bit counter 23
     assign led_rgb_data = blink_counter[23] ? 24'h7f0000 : 24'h007f00;
 
     ws2812 ws2812_inst (
       .data(PIN_24),
       .clk(CLK),
-      .reset(0),
       .rgb_data(led_rgb_data),
       .led_num(led_position),
-      .write(led_write)
+      .reset(0),
+      .write(1)
     );
 
 endmodule

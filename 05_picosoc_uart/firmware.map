@@ -1,0 +1,80 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000050000 0x0000000000100000 xr
+RAM              0x0000000000000000 0x0000000000002000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.text           0x0000000000050000      0x234
+                0x0000000000050000                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000000000050000      0x16a /tmp/cctNDHX5.o
+ .text          0x000000000005016a       0xca /tmp/cccDRAsI.o
+                0x000000000005016a                set_irq_mask
+                0x0000000000050170                main
+ *(.text*)
+ *(.rodata)
+ *(.rodata*)
+ *(.srodata)
+ *(.srodata*)
+ *(.eh_frame)
+ *(.eh_frame*)
+                0x0000000000050234                . = ALIGN (0x4)
+                0x0000000000050234                _etext = .
+                0x0000000000050234                _sidata = _etext
+
+.rela.dyn       0x0000000000050234        0x0
+ .rela.text     0x0000000000050234        0x0 /tmp/cctNDHX5.o
+
+.data           0x0000000000000000       0x14 load address 0x0000000000050234
+                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000000000                _sdata = .
+                0x0000000000000000                _ram_start = .
+ *(.data)
+ .data          0x0000000000000000       0x14 /tmp/cctNDHX5.o
+ .data          0x0000000000000014        0x0 /tmp/cccDRAsI.o
+ *(.data*)
+ *(.sdata)
+ *(.sdata*)
+ *(.init_array)
+ *(.init_array*)
+                0x0000000000000014                . = ALIGN (0x4)
+                0x0000000000000014                _edata = .
+
+.bss            0x0000000000000014        0x0 load address 0x0000000000050248
+                0x0000000000000014                . = ALIGN (0x4)
+                0x0000000000000014                _sbss = .
+ *(.bss)
+ .bss           0x0000000000000014        0x0 /tmp/cctNDHX5.o
+ .bss           0x0000000000000014        0x0 /tmp/cccDRAsI.o
+ *(.bss*)
+ *(.sbss)
+ *(.sbss*)
+ *(COMMON)
+                0x0000000000000014                . = ALIGN (0x4)
+                0x0000000000000014                _ebss = .
+
+.heap           0x0000000000000014        0x0
+                0x0000000000000014                . = ALIGN (0x4)
+                0x0000000000000014                _heap_start = .
+LOAD /tmp/cctNDHX5.o
+LOAD /tmp/cccDRAsI.o
+OUTPUT(firmware.elf elf32-littleriscv)
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 /tmp/cccDRAsI.o
+                                         0x34 (size before relaxing)
+
+Cross Reference Table
+
+Symbol                                            File
+_ebss                                             /tmp/cccDRAsI.o
+_sbss                                             /tmp/cccDRAsI.o
+debug                                             /tmp/cctNDHX5.o
+main                                              /tmp/cccDRAsI.o
+                                                  /tmp/cctNDHX5.o
+set_irq_mask                                      /tmp/cccDRAsI.o

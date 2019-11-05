@@ -5,7 +5,7 @@
 //------------------------------------------------------------------
 
 `default_nettype none
-`define DUMPSTR(x) `"x.vcd`"
+`define DUMPSTR(x) `"top_tb.vcd`"
 `timescale 1 ns / 1 ns
 
 module main_tb();
@@ -17,13 +17,15 @@ parameter DURATION = 10000000;
 reg clk = 0;
 always #(31) clk = ~clk;
 
-//-- Led port
+//-- ws2812 port
 wire PIN_24;
+wire LED;
 
 //-- Instantiation of the unit to test
 top UUT (
   .PIN_24(PIN_24),
-  .CLK(clk)
+  .CLK(clk),
+  .LED(LED)
   );
 
 initial begin
